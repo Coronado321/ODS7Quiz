@@ -24,7 +24,7 @@ Vel_input = st.sidebar.slider("Velocidad del viento (m/s)", 0, 140)
 # Cargamos el archivo con los datos (.csv)
 df =  pd.read_csv('EnergiaEolica.csv', encoding='latin-1')
 # Seleccionamos las variables
-X = df['Velocidad_Viento_ms']
+X = df[['Velocidad_Viento_ms']]
 y = df['Eficiencia_Energetica_kWh']
 
 # Creamos y entrenamos el modelo
